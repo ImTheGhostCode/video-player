@@ -7,6 +7,12 @@
     background-color: transparent;
     /* Evita que se repita la imagen dentro del contenedor */
     background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Redimensianar los botones al hacer click sobre ellos */
+.button:active {
+    transform: scale(.9);
 }
 
 #play {
