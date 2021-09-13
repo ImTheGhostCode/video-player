@@ -1,0 +1,26 @@
+.button {
+    /* Determina el ancho de la línea */
+    inline-size: 32px;
+    /* Tamaño de la línea en vertícal */
+    block-size: 32px;
+    border: none;
+    background-color: transparent;
+    /* Evita que se repita la imagen dentro del contenedor */
+    background-repeat: no-repeat;
+}
+
+#play {
+    background-image: url('../images/play.svg');
+}
+
+#pause {
+    background-image: url('../images/pause.svg');
+}
+
+#backward {
+    background-image: url('../images/-10.svg');
+}
+
+#forward {
+    background-image: url('../images/+10.svg');
+}

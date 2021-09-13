@@ -1,0 +1,6 @@
+/* Importa archivos css que estén dentro del proyecto */
+@import './buttons.css';
+
+body {
+    background-color: #26b4bc;
+}
