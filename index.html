@@ -7,15 +7,27 @@
     <title>Video Player</title>
 </head>
 <body>
-    <button class="button" id="play"></button>
-    <button class="button" id="pause" hidden></button>
-    <button class="button" id="backward"></button>
-    <button class="button" id="forward"></button>
-    <video controls 
-        id="video" 
-        src="./videos/lofi.mp4" 
-        width="400px"
-        poster="./images/poster.jpg"> <!-- Poster permite poner una imagen al video que se muestra cuando este no haya cargado aún --> </video>
+    <div class="wrapper">
+        <div class="player">
+            <!-- POSTER
+            Permite poner una imagen al video que se muestra cuando este no haya cargado aún -->
+            <video id="video" src="./videos/lofi.mp4" width="400px" poster="./images/poster.jpg"></video>
+            <h2 class="player-title">Música para programar</h2>
+            <div class="player-actions">
+                <!-- ARIA-LABEL
+                Permite definir el texto que podrá ser usado por el lector de pantalla, aporta a la accesibilidad. -->
+                <button class="button" id="backward" aria-label="Retroceder 10 segundos" title="Retroceder 10 segundos"></button>
+                <!-- TITLE
+                Permite definir el texto que podrá ser leído al momento de posicionar el mouse sobre el elemento. -->
+                <button class="button" id="play" aria-label="Reproducir" title="Reproducir"></button>
+                <button class="button" id="pause" aria-label="Pausar" title="Pausar" hidden></button>
+                <button class="button" id="forward" aria-label="Avanzar 10 segundos" title="Avanzar 10 segundos"></button>
+            </div>
+            <div class="player-progress">
+                <input id="progress" type="range" min="0" value="0" step="1">
+            </div>
+        </div>
+    </div>
 
     <script src="./js/handleVideo.js"></script>
 </body>

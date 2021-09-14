@@ -4,3 +4,49 @@
 body {
     background-color: #26b4bc;
 }
+
+.wrapper {
+    max-inline-size: 900px;
+    margin: auto;
+}
+
+.player {
+    position: relative;
+}
+
+.player video {
+    inline-size: 100%;
+    aspect-ratio: 16/9; /* Permite mantener la relación de aspecto y no se redimensione al cargar */
+    vertical-align: middle;
+}
+
+.player-title {
+    color: white;
+    position: absolute;
+    inset-block-start: 0; /* Permite la alineación vertical de acuerdo al elemento padre con position relative */
+    inset-inline-start: 30px; /* Permite la alineación horizontal de acuerdo al elemento padre con position relative */
+}
+
+.player-actions {
+    position: absolute;
+    inset: 0; /* Shorthand para inset-block-end, inset-block-start, inset-inline-end, inset-inline-start que permiten la alineación vertical y 
+    horizontal del elemento de acuerdo al contenedor padre con position relative y permite ampliar el elemento al width y height 
+    del contenedor padre. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.player-progress {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    padding: 20px;
+}
+
+.player-progress input {
+    flex: 1;
+    cursor: pointer;
+}
